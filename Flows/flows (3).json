@@ -1,0 +1,3145 @@
+[
+    {
+        "id": "7440d291edc2322b",
+        "type": "tab",
+        "label": "Tørring Kraftvarmeværk",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "df2ebf270d7f49d2",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e2795d7a7bc129e7",
+        "type": "tab",
+        "label": "DLE",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dc6a38cba885899f",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0da7672a3906ac4f",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ccb1bd0c08f1227a",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d487f9d7fc0613a4",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "de339833aaec5a6a",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "true",
+            "lockMenu": "true",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "93540c8f31d97eed",
+        "type": "ui_group",
+        "name": "Dashboard funct.",
+        "tab": "d487f9d7fc0613a4",
+        "order": 1,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": "1"
+    },
+    {
+        "id": "acf4d894f9b5eeb9",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "142.93.135.2",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "52b92c1c2892bcf3",
+        "type": "ui_tab",
+        "name": "Temperatur",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7bfbec3508845485",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "52b92c1c2892bcf3",
+        "order": 1,
+        "disp": true,
+        "width": 20
+    },
+    {
+        "id": "c12460294c329b57",
+        "type": "ui_tab",
+        "name": "Tryk",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b4bc0e3d8394fb41",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "c12460294c329b57",
+        "order": 1,
+        "disp": true,
+        "width": 20
+    },
+    {
+        "id": "59ea299027d1902f",
+        "type": "MSSQL-CN",
+        "name": "Tørring DB",
+        "server": "localhost",
+        "port": "1433",
+        "encyption": false,
+        "database": "Tørring"
+    },
+    {
+        "id": "bb779fbc966246cc",
+        "type": "mqtt-broker",
+        "name": "test.mosquitto.org",
+        "broker": "test.mosquitto.org",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "8e8236f5522c2bc6",
+        "type": "inject",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 2380,
+        "wires": [
+            [
+                "98e7125ed4caa10a"
+            ]
+        ]
+    },
+    {
+        "id": "98e7125ed4caa10a",
+        "type": "http request",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.weatherstack.com/current?access_key=84392d137d23057c19d562c983228c0d&query=Aarhus",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 470,
+        "y": 2380,
+        "wires": [
+            [
+                "7327a906d436efca"
+            ]
+        ]
+    },
+    {
+        "id": "7327a906d436efca",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 700,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "0187b024f765fddd",
+        "type": "mqtt in",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "topic": "00-02-01-aa-c5-14/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "acf4d894f9b5eeb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "8872d42291d94dad"
+            ]
+        ]
+    },
+    {
+        "id": "0fede69559f8c1d3",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b9c82297d5137dae",
+        "type": "mqtt in",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "topic": "00-02-01-aa-53-bd/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "acf4d894f9b5eeb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 1580,
+        "wires": [
+            [
+                "0fbb3b4332e19b89",
+                "175238d365e7e4d6",
+                "4e1b92157073bed6",
+                "71a28727fc5dde42",
+                "fc43e938d1c5d2bf",
+                "e3c3733744f94c8f",
+                "941b197739fc909c",
+                "256c43441d41ab23"
+            ]
+        ]
+    },
+    {
+        "id": "0fbb3b4332e19b89",
+        "type": "mqtt-processData",
+        "z": "7440d291edc2322b",
+        "X": "1",
+        "x": 420,
+        "y": 1300,
+        "wires": [
+            [
+                "4f60028992768cd5"
+            ]
+        ]
+    },
+    {
+        "id": "0d9e1384c370d915",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "4e1b92157073bed6",
+        "type": "mqtt-processData",
+        "z": "7440d291edc2322b",
+        "X": "2",
+        "x": 440,
+        "y": 1500,
+        "wires": [
+            [
+                "a808d1763459ca19"
+            ]
+        ]
+    },
+    {
+        "id": "a808d1763459ca19",
+        "type": "sensor-processData",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "scale": 1,
+        "convert": "2",
+        "octet": "2",
+        "index": "0",
+        "x": 720,
+        "y": 1500,
+        "wires": [
+            [
+                "9580f0d0995dcd06"
+            ]
+        ]
+    },
+    {
+        "id": "73aa1732d5c110e2",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "71a28727fc5dde42",
+        "type": "mqtt-processData",
+        "z": "7440d291edc2322b",
+        "X": "3",
+        "x": 440,
+        "y": 1600,
+        "wires": [
+            [
+                "980f48f28c6b0f0f",
+                "94e03e184865416a"
+            ]
+        ]
+    },
+    {
+        "id": "980f48f28c6b0f0f",
+        "type": "sensor-processData",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "scale": 1,
+        "convert": "2",
+        "octet": "2",
+        "index": "0",
+        "x": 720,
+        "y": 1600,
+        "wires": [
+            [
+                "26fa04d9de42bce9"
+            ]
+        ]
+    },
+    {
+        "id": "5efbeaf015c5c590",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "fc43e938d1c5d2bf",
+        "type": "mqtt-processData",
+        "z": "7440d291edc2322b",
+        "X": "4",
+        "x": 440,
+        "y": 1840,
+        "wires": [
+            [
+                "818adcae84f8491c"
+            ]
+        ]
+    },
+    {
+        "id": "818adcae84f8491c",
+        "type": "sensor-processData",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "scale": 1,
+        "convert": "2",
+        "octet": "2",
+        "index": "0",
+        "x": 720,
+        "y": 1840,
+        "wires": [
+            [
+                "e7be1d6bde456306"
+            ]
+        ]
+    },
+    {
+        "id": "02cc554890a6c8ca",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "e3c3733744f94c8f",
+        "type": "mqtt-processData",
+        "z": "7440d291edc2322b",
+        "X": "6",
+        "x": 440,
+        "y": 1940,
+        "wires": [
+            [
+                "566bb87409c4adbc"
+            ]
+        ]
+    },
+    {
+        "id": "566bb87409c4adbc",
+        "type": "sensor-processData",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "scale": 1,
+        "convert": "2",
+        "octet": "2",
+        "index": "0",
+        "x": 720,
+        "y": 1940,
+        "wires": [
+            [
+                "3af447cdfce0d081"
+            ]
+        ]
+    },
+    {
+        "id": "ac6ece267db48892",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1560,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "941b197739fc909c",
+        "type": "mqtt-processData",
+        "z": "7440d291edc2322b",
+        "X": "8",
+        "x": 440,
+        "y": 2040,
+        "wires": [
+            [
+                "15492b1ddbb873de"
+            ]
+        ]
+    },
+    {
+        "id": "15492b1ddbb873de",
+        "type": "sensor-processData",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "scale": 1,
+        "convert": "2",
+        "octet": "2",
+        "index": "0",
+        "x": 720,
+        "y": 2040,
+        "wires": [
+            [
+                "45d0bd7e839c01e4"
+            ]
+        ]
+    },
+    {
+        "id": "c12d2f30e321e92f",
+        "type": "mqtt in",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "topic": "00-02-01-aa-c5-14/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "acf4d894f9b5eeb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 560,
+        "wires": [
+            [
+                "b3d3eeb8c4f23428"
+            ]
+        ]
+    },
+    {
+        "id": "f37f412922339e36",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "b3d3eeb8c4f23428",
+        "type": "mqtt-processData",
+        "z": "7440d291edc2322b",
+        "X": "2",
+        "x": 460,
+        "y": 560,
+        "wires": [
+            [
+                "d31cf0db2f23eff9"
+            ]
+        ]
+    },
+    {
+        "id": "d31cf0db2f23eff9",
+        "type": "sensor-processData",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "scale": 1,
+        "convert": "1",
+        "octet": "4",
+        "index": "0",
+        "x": 820,
+        "y": 560,
+        "wires": [
+            [
+                "f37f412922339e36"
+            ]
+        ]
+    },
+    {
+        "id": "e437a00f270ccc04",
+        "type": "mqtt in",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "topic": "00-02-01-aa-c5-14/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "acf4d894f9b5eeb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 640,
+        "wires": [
+            [
+                "3fe13fba27cdd6c5"
+            ]
+        ]
+    },
+    {
+        "id": "c2d7202b3da9c3bd",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "3fe13fba27cdd6c5",
+        "type": "mqtt-processData",
+        "z": "7440d291edc2322b",
+        "X": "3",
+        "x": 460,
+        "y": 640,
+        "wires": [
+            [
+                "70626f47cd525a05"
+            ]
+        ]
+    },
+    {
+        "id": "70626f47cd525a05",
+        "type": "sensor-processData",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "scale": 1,
+        "convert": "2",
+        "octet": "1",
+        "index": "0",
+        "x": 820,
+        "y": 640,
+        "wires": [
+            [
+                "c2d7202b3da9c3bd"
+            ]
+        ]
+    },
+    {
+        "id": "700ea610b81c5e06",
+        "type": "mqtt in",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "topic": "00-02-01-aa-c5-14/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "acf4d894f9b5eeb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 740,
+        "wires": [
+            [
+                "699a27d1f41e3e07"
+            ]
+        ]
+    },
+    {
+        "id": "34116b12c13ef06b",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "699a27d1f41e3e07",
+        "type": "mqtt-processData",
+        "z": "7440d291edc2322b",
+        "X": "4",
+        "x": 460,
+        "y": 740,
+        "wires": [
+            [
+                "fe0dc5ea768e5ca4"
+            ]
+        ]
+    },
+    {
+        "id": "fe0dc5ea768e5ca4",
+        "type": "sensor-processData",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "scale": 1,
+        "convert": "2",
+        "octet": "2",
+        "index": "0",
+        "x": 820,
+        "y": 740,
+        "wires": [
+            [
+                "34116b12c13ef06b"
+            ]
+        ]
+    },
+    {
+        "id": "53d29361cbf33971",
+        "type": "mqtt in",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "topic": "00-02-01-aa-c5-14/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "acf4d894f9b5eeb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 840,
+        "wires": [
+            [
+                "92a2716209410d37"
+            ]
+        ]
+    },
+    {
+        "id": "ffb46b404b8c7ba2",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "92a2716209410d37",
+        "type": "mqtt-processData",
+        "z": "7440d291edc2322b",
+        "X": "6",
+        "x": 460,
+        "y": 840,
+        "wires": [
+            [
+                "d1adb230333c990f"
+            ]
+        ]
+    },
+    {
+        "id": "d1adb230333c990f",
+        "type": "sensor-processData",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "scale": 1,
+        "convert": "2",
+        "octet": "2",
+        "index": "0",
+        "x": 820,
+        "y": 840,
+        "wires": [
+            [
+                "ffb46b404b8c7ba2"
+            ]
+        ]
+    },
+    {
+        "id": "b27880a807766f94",
+        "type": "mqtt in",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "topic": "00-02-01-aa-c5-14/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "acf4d894f9b5eeb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 940,
+        "wires": [
+            [
+                "5295fcdf08214e1e"
+            ]
+        ]
+    },
+    {
+        "id": "fd85cefae15c5ccc",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "5295fcdf08214e1e",
+        "type": "mqtt-processData",
+        "z": "7440d291edc2322b",
+        "X": "8",
+        "x": 460,
+        "y": 940,
+        "wires": [
+            [
+                "3c520f90c5783a88"
+            ]
+        ]
+    },
+    {
+        "id": "3c520f90c5783a88",
+        "type": "sensor-processData",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "scale": 1,
+        "convert": "2",
+        "octet": "2",
+        "index": "0",
+        "x": 820,
+        "y": 940,
+        "wires": [
+            [
+                "fd85cefae15c5ccc"
+            ]
+        ]
+    },
+    {
+        "id": "23bf769622b5aceb",
+        "type": "mqtt in",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "topic": "00-02-01-aa-c5-14/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "acf4d894f9b5eeb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 120,
+        "wires": [
+            [
+                "c6b797f5b9884fe5"
+            ]
+        ]
+    },
+    {
+        "id": "c6b797f5b9884fe5",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8872d42291d94dad",
+        "type": "mqtt-processData",
+        "z": "7440d291edc2322b",
+        "X": "1",
+        "x": 460,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "47d0979b44515369",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 21",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "18d51116596d3898",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 22",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e413f19cba47d3bb",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 23",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f673527732a80f87",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 24",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "8b1d76037af1cf9b",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "4f60028992768cd5",
+        "type": "sensor-processData",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "scale": 1,
+        "convert": "2",
+        "octet": "2",
+        "index": "0",
+        "x": 700,
+        "y": 1300,
+        "wires": [
+            [
+                "47ad0283f8df17dd"
+            ]
+        ]
+    },
+    {
+        "id": "14ae3830488f33e9",
+        "type": "template",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "P1: {{payload}} Bar",
+        "output": "str",
+        "x": 1100,
+        "y": 1300,
+        "wires": [
+            [
+                "8b1d76037af1cf9b",
+                "afe049b849d77dd4",
+                "966d6fce43b2c18c"
+            ]
+        ]
+    },
+    {
+        "id": "47ad0283f8df17dd",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 2",
+        "func": "msg.payload = msg.payload * 0.001\nflow.set(\"P1\", msg.payload)\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 1300,
+        "wires": [
+            [
+                "14ae3830488f33e9",
+                "e27c883e6f1cbc3d",
+                "7896178c0aec2851",
+                "e762692a4417c1e5",
+                "471587c95e6c89e3",
+                "28de12260a7b9381",
+                "df9ad299acbe1514"
+            ]
+        ]
+    },
+    {
+        "id": "175238d365e7e4d6",
+        "type": "mqtt-processData",
+        "z": "7440d291edc2322b",
+        "X": "1",
+        "x": 420,
+        "y": 1400,
+        "wires": [
+            [
+                "87134d3be8efa59e"
+            ]
+        ]
+    },
+    {
+        "id": "a9a196eda51f5eb0",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "87134d3be8efa59e",
+        "type": "sensor-processData",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "scale": 1,
+        "convert": "2",
+        "octet": "2",
+        "index": "4",
+        "x": 700,
+        "y": 1400,
+        "wires": [
+            [
+                "07cece22ab3bac80"
+            ]
+        ]
+    },
+    {
+        "id": "d90ef2a89b5806df",
+        "type": "template",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "T1: {{payload}} °C",
+        "output": "str",
+        "x": 1100,
+        "y": 1400,
+        "wires": [
+            [
+                "a9a196eda51f5eb0",
+                "7c31864c5f1e930d",
+                "588c522d62015362"
+            ]
+        ]
+    },
+    {
+        "id": "07cece22ab3bac80",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 4",
+        "func": "msg.payload = msg.payload * 0.01\nflow.set(\"T1\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 1400,
+        "wires": [
+            [
+                "d90ef2a89b5806df",
+                "e27c883e6f1cbc3d",
+                "7896178c0aec2851",
+                "3f849f87a25fab4a",
+                "972c269ab212a8ac",
+                "42e52a7134b04e94",
+                "da679a8f3aa212dc"
+            ]
+        ]
+    },
+    {
+        "id": "9aa57f2f735f207f",
+        "type": "template",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "P2: {{payload}} Bar",
+        "output": "str",
+        "x": 1120,
+        "y": 1500,
+        "wires": [
+            [
+                "0d9e1384c370d915",
+                "42f54c297f287dce",
+                "e49a1e174f5191d0"
+            ]
+        ]
+    },
+    {
+        "id": "9580f0d0995dcd06",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 5",
+        "func": "msg.payload=msg.payload*0.1\nflow.set(\"P2\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 1500,
+        "wires": [
+            [
+                "9aa57f2f735f207f",
+                "e27c883e6f1cbc3d",
+                "7896178c0aec2851",
+                "e762692a4417c1e5",
+                "5749b6bea9b2e7f8"
+            ]
+        ]
+    },
+    {
+        "id": "360672b61e644ceb",
+        "type": "template",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "P3: {{payload}} Bar",
+        "output": "str",
+        "x": 1100,
+        "y": 1600,
+        "wires": [
+            [
+                "73aa1732d5c110e2",
+                "e22df3975f0df4be",
+                "4af79b29ea6e319d"
+            ]
+        ]
+    },
+    {
+        "id": "7092559d2c9575e8",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "94e03e184865416a",
+        "type": "sensor-processData",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "scale": 1,
+        "convert": "2",
+        "octet": "2",
+        "index": "4",
+        "x": 720,
+        "y": 1640,
+        "wires": [
+            [
+                "2321a627a6ca0fe7"
+            ]
+        ]
+    },
+    {
+        "id": "ca7c4b6e1bab1dd1",
+        "type": "template",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "T3: {{payload}} °C",
+        "output": "str",
+        "x": 1100,
+        "y": 1640,
+        "wires": [
+            [
+                "7092559d2c9575e8",
+                "e4671556528b8f63",
+                "89ea151012398486"
+            ]
+        ]
+    },
+    {
+        "id": "2321a627a6ca0fe7",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 7",
+        "func": "msg.payload=msg.payload*0.01\nflow.set(\"T3\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 1640,
+        "wires": [
+            [
+                "ca7c4b6e1bab1dd1",
+                "e27c883e6f1cbc3d",
+                "7896178c0aec2851",
+                "3f849f87a25fab4a",
+                "972c269ab212a8ac",
+                "866aa4cb8c39cf5e"
+            ]
+        ]
+    },
+    {
+        "id": "26fa04d9de42bce9",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 6",
+        "func": "msg.payload=msg.payload*0.001\nflow.set(\"P3\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 1600,
+        "wires": [
+            [
+                "360672b61e644ceb",
+                "e27c883e6f1cbc3d",
+                "7896178c0aec2851",
+                "e762692a4417c1e5",
+                "471587c95e6c89e3",
+                "17d12f08a2a31463"
+            ]
+        ]
+    },
+    {
+        "id": "e7be1d6bde456306",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 8",
+        "func": "msg.payload=msg.payload*0.01\nflow.set(\"P4\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 1840,
+        "wires": [
+            [
+                "0d7738ac8fe7e0a6",
+                "e27c883e6f1cbc3d",
+                "7896178c0aec2851",
+                "e762692a4417c1e5",
+                "f61413c12c49bbc4"
+            ]
+        ]
+    },
+    {
+        "id": "0d7738ac8fe7e0a6",
+        "type": "template",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "P4: {{payload}} Bar",
+        "output": "str",
+        "x": 1100,
+        "y": 1840,
+        "wires": [
+            [
+                "5efbeaf015c5c590",
+                "e7d5dea212a304c1",
+                "c32bda0a6f56420e"
+            ]
+        ]
+    },
+    {
+        "id": "3af447cdfce0d081",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 9",
+        "func": "msg.payload=msg.payload*0.01\nflow.set(\"P5\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 1940,
+        "wires": [
+            [
+                "cc44659aadbb3931",
+                "e27c883e6f1cbc3d",
+                "7896178c0aec2851",
+                "e762692a4417c1e5",
+                "ec8d85b9da93c24f"
+            ]
+        ]
+    },
+    {
+        "id": "cc44659aadbb3931",
+        "type": "template",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "P5: {{payload}} Bar",
+        "output": "str",
+        "x": 1100,
+        "y": 1940,
+        "wires": [
+            [
+                "02cc554890a6c8ca",
+                "2647e5c9be974189",
+                "d65efefa1374a2f1"
+            ]
+        ]
+    },
+    {
+        "id": "45d0bd7e839c01e4",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 10",
+        "func": "msg.payload=msg.payload*0.01\nflow.set(\"P6\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 2040,
+        "wires": [
+            [
+                "ce7d15b2f01a5916",
+                "e27c883e6f1cbc3d",
+                "e762692a4417c1e5",
+                "7896178c0aec2851",
+                "962610deca1a0425"
+            ]
+        ]
+    },
+    {
+        "id": "ce7d15b2f01a5916",
+        "type": "template",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "P6: {{payload}} Bar",
+        "output": "str",
+        "x": 1200,
+        "y": 2040,
+        "wires": [
+            [
+                "ac6ece267db48892",
+                "f099e3ab429d9234",
+                "bb7688ddbde267ce"
+            ]
+        ]
+    },
+    {
+        "id": "e27c883e6f1cbc3d",
+        "type": "ui_chart",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "group": "93540c8f31d97eed",
+        "order": 11,
+        "width": "0",
+        "height": "0",
+        "label": "",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#217aba",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1630,
+        "y": 2140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "afe049b849d77dd4",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "93540c8f31d97eed",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1270,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "7c31864c5f1e930d",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "93540c8f31d97eed",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1250,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "42f54c297f287dce",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "93540c8f31d97eed",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1250,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "e22df3975f0df4be",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "93540c8f31d97eed",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1270,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "e4671556528b8f63",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "93540c8f31d97eed",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1270,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "e7d5dea212a304c1",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "93540c8f31d97eed",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1270,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "2647e5c9be974189",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "93540c8f31d97eed",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1270,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "f099e3ab429d9234",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "93540c8f31d97eed",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1330,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "b27628d23ee1d8bd",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "93540c8f31d97eed",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Hørring",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "24",
+        "color": "#000000",
+        "x": 1420,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "7896178c0aec2851",
+        "type": "ui_chart",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "group": "93540c8f31d97eed",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1310,
+        "y": 2200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "966d6fce43b2c18c",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "b4bc0e3d8394fb41",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1450,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "588c522d62015362",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "7bfbec3508845485",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1370,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "e49a1e174f5191d0",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "b4bc0e3d8394fb41",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1390,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "4af79b29ea6e319d",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "b4bc0e3d8394fb41",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1410,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "89ea151012398486",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "7bfbec3508845485",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1390,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "c32bda0a6f56420e",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "b4bc0e3d8394fb41",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1390,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "d65efefa1374a2f1",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "b4bc0e3d8394fb41",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1410,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "bb7688ddbde267ce",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "b4bc0e3d8394fb41",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1470,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "3f849f87a25fab4a",
+        "type": "ui_chart",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "group": "7bfbec3508845485",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatur Graf",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2060,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e762692a4417c1e5",
+        "type": "ui_chart",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "group": "b4bc0e3d8394fb41",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "label": "Tryk Graf",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1800,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "972c269ab212a8ac",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 1",
+        "func": "msg.topic=\"Differens temperatur T1-T3 [°C]\"\nvar t1= flow.get(\"T1\")\nvar t3= flow.get(\"T3\")\nif (t1>0 && t3>0) {\n    msg.payload = t1-t3\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1780,
+        "y": 1320,
+        "wires": [
+            [
+                "3f849f87a25fab4a",
+                "b2e8c351a6d75af4"
+            ]
+        ]
+    },
+    {
+        "id": "9b9e701a1e4d48fc",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 20",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2120,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "b2e8c351a6d75af4",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "7bfbec3508845485",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Differens Temperatur:",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1960,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "471587c95e6c89e3",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 11",
+        "func": "msg.topic=\"Differens Tryk P1-P3 [°C]\"\nvar p1= flow.get(\"P1\")\nvar p3= flow.get(\"P3\")\nif (p1>0 && p3>0) {\n    msg.payload = p1-p3\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1770,
+        "y": 1580,
+        "wires": [
+            [
+                "ed410541ec6f6fb8",
+                "e762692a4417c1e5"
+            ]
+        ]
+    },
+    {
+        "id": "ed410541ec6f6fb8",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "b4bc0e3d8394fb41",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Differens Tryk P1-P3:",
+        "format": "{{msg.payload}} Bar",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1960,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "28de12260a7b9381",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 25",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "42e52a7134b04e94",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 26",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "962610deca1a0425",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 13",
+        "func": "// Tjek om msg.payload findes og er et tal\nif (typeof msg.payload !== \"number\" || isNaN(msg.payload)) {\n    node.warn(\"Payload er ikke et gyldigt tal!\");\n    return null; // stop flowet her\n}\n\n// Tjek om tallet ligger i et forventet interval\nif (msg.payload < 0 || msg.payload > 10) {\n    node.warn(\"Payload udenfor interval: \" + msg.payload);\n    return null;\n}\n\nreturn msg; // alt OK\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 2080,
+        "wires": [
+            [
+                "c620ee4c697f8bed"
+            ]
+        ]
+    },
+    {
+        "id": "ec8d85b9da93c24f",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 14",
+        "func": "// Tjek om msg.payload findes og er et tal\nif (typeof msg.payload !== \"number\" || isNaN(msg.payload)) {\n    node.warn(\"Payload er ikke et gyldigt tal!\");\n    return null; // stop flowet her\n}\n\n// Tjek om tallet ligger i et forventet interval\nif (msg.payload < 0 || msg.payload > 10) {\n    node.warn(\"Payload udenfor interval: \" + msg.payload);\n    return null;\n}\n\nreturn msg; // alt OK\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1980,
+        "wires": [
+            [
+                "c620ee4c697f8bed"
+            ]
+        ]
+    },
+    {
+        "id": "f61413c12c49bbc4",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 15",
+        "func": "// Tjek om msg.payload findes og er et tal\nif (typeof msg.payload !== \"number\" || isNaN(msg.payload)) {\n    node.warn(\"Payload er ikke et gyldigt tal!\");\n    return null; // stop flowet her\n}\n\n// Tjek om tallet ligger i et forventet interval\nif (msg.payload < 0 || msg.payload > 10) {\n    node.warn(\"Payload udenfor interval: \" + msg.payload);\n    return null;\n}\n\nreturn msg; // alt OK\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1880,
+        "wires": [
+            [
+                "c620ee4c697f8bed"
+            ]
+        ]
+    },
+    {
+        "id": "866aa4cb8c39cf5e",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 16",
+        "func": "// Tjek om msg.payload findes og er et tal\nif (typeof msg.payload !== \"number\" || isNaN(msg.payload)) {\n    node.warn(\"Payload er ikke et gyldigt tal!\");\n    return null; // stop flowet her\n}\n\n// Tjek om tallet ligger i et forventet interval\nif (msg.payload < 0 || msg.payload > 100) {\n    node.warn(\"Payload udenfor interval: \" + msg.payload);\n    return null;\n}\n\nreturn msg; // alt OK\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1680,
+        "wires": [
+            [
+                "c620ee4c697f8bed"
+            ]
+        ]
+    },
+    {
+        "id": "17d12f08a2a31463",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 17",
+        "func": "// Tjek om msg.payload findes og er et tal\nif (typeof msg.payload !== \"number\" || isNaN(msg.payload)) {\n    node.warn(\"Payload er ikke et gyldigt tal!\");\n    return null; // stop flowet her\n}\n\n// Tjek om tallet ligger i et forventet interval\nif (msg.payload < 0 || msg.payload > 10) {\n    node.warn(\"Payload udenfor interval: \" + msg.payload);\n    return null;\n}\n\nreturn msg; // alt OK\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1560,
+        "wires": [
+            [
+                "c620ee4c697f8bed"
+            ]
+        ]
+    },
+    {
+        "id": "5749b6bea9b2e7f8",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 18",
+        "func": "// Tjek om msg.payload findes og er et tal\nif (typeof msg.payload !== \"number\" || isNaN(msg.payload)) {\n    node.warn(\"Payload er ikke et gyldigt tal!\");\n    return null; // stop flowet her\n}\n\n// Tjek om tallet ligger i et forventet interval\nif (msg.payload < 0 || msg.payload > 20) {\n    node.warn(\"Payload udenfor interval: \" + msg.payload);\n    return null;\n}\n\nreturn msg; // alt OK\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1460,
+        "wires": [
+            [
+                "c620ee4c697f8bed"
+            ]
+        ]
+    },
+    {
+        "id": "da679a8f3aa212dc",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 19",
+        "func": "// Tjek om msg.payload findes og er et tal\nif (typeof msg.payload !== \"number\" || isNaN(msg.payload)) {\n    node.warn(\"Payload er ikke et gyldigt tal!\");\n    return null; // stop flowet her\n}\n\n// Tjek om tallet ligger i et forventet interval\nif (msg.payload < 0 || msg.payload > 100) {\n    node.warn(\"Payload udenfor interval: \" + msg.payload);\n    return null;\n}\n\nreturn msg; // alt OK\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1340,
+        "wires": [
+            [
+                "c620ee4c697f8bed"
+            ]
+        ]
+    },
+    {
+        "id": "df9ad299acbe1514",
+        "type": "function",
+        "z": "7440d291edc2322b",
+        "name": "function 20",
+        "func": "// Tjek om msg.payload findes og er et tal\nif (typeof msg.payload !== \"number\" || isNaN(msg.payload)) {\n    node.warn(\"Payload er ikke et gyldigt tal!\");\n    return null; // stop flowet her\n}\n\n// Tjek om tallet ligger i et forventet interval\nif (msg.payload < 0 || msg.payload > 10) {\n    node.warn(\"Payload udenfor interval: \" + msg.payload);\n    return null;\n}\n\nreturn msg; // alt OK\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1260,
+        "wires": [
+            [
+                "c620ee4c697f8bed"
+            ]
+        ]
+    },
+    {
+        "id": "c620ee4c697f8bed",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 27",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "256c43441d41ab23",
+        "type": "trigger",
+        "z": "7440d291edc2322b",
+        "name": "",
+        "op1": "",
+        "op2": "No Message!",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "2",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 140,
+        "y": 1720,
+        "wires": [
+            [
+                "171ee8e8df400620",
+                "ee095d1d37e8e3a8"
+            ]
+        ]
+    },
+    {
+        "id": "171ee8e8df400620",
+        "type": "debug",
+        "z": "7440d291edc2322b",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "ee095d1d37e8e3a8",
+        "type": "ui_text",
+        "z": "7440d291edc2322b",
+        "group": "93540c8f31d97eed",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tilstand (WatchDog)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 440,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "2ea7b97cc1f4ea2c",
+        "type": "MSSQL",
+        "z": "df2ebf270d7f49d2",
+        "mssqlCN": "59ea299027d1902f",
+        "name": "",
+        "query": "",
+        "outField": "payload",
+        "x": 740,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0382156b557e8b3f",
+        "type": "function",
+        "z": "df2ebf270d7f49d2",
+        "name": "function 3",
+        "func": "// Hent værdien fra Inject-node\nlet tryk = msg.payload;\n\n// Byg SQL kommandoen\nmsg.topic = `INSERT INTO NodeRed (Tryk) VALUES (${tryk})`;\n\n// Send beskeden videre til MSSQL-noden\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 220,
+        "wires": [
+            [
+                "2ea7b97cc1f4ea2c"
+            ]
+        ]
+    },
+    {
+        "id": "be92f384c3a9d3e0",
+        "type": "inject",
+        "z": "df2ebf270d7f49d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "0382156b557e8b3f"
+            ]
+        ]
+    },
+    {
+        "id": "f24803ba91a3ac0c",
+        "type": "http request",
+        "z": "df2ebf270d7f49d2",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "body",
+        "url": "https://api.energidataservice.dk/dataset/DeclarationProduction?start=2022-05-01&end=2022-06-01&filter={\"PriceArea\":[\"DK1\"]}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 590,
+        "y": 300,
+        "wires": [
+            [
+                "5938783685984c95"
+            ]
+        ]
+    },
+    {
+        "id": "5938783685984c95",
+        "type": "debug",
+        "z": "df2ebf270d7f49d2",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "906d9d58cd69e013",
+        "type": "inject",
+        "z": "df2ebf270d7f49d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 300,
+        "wires": [
+            [
+                "07ba7c71e193a943"
+            ]
+        ]
+    },
+    {
+        "id": "07ba7c71e193a943",
+        "type": "function",
+        "z": "df2ebf270d7f49d2",
+        "name": "function 12",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 300,
+        "wires": [
+            [
+                "f24803ba91a3ac0c"
+            ]
+        ]
+    },
+    {
+        "id": "326a622f20d4307c",
+        "type": "mqtt in",
+        "z": "e2795d7a7bc129e7",
+        "name": "",
+        "topic": "DLE/gruppe1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "acf4d894f9b5eeb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "cba76fde17f40331"
+            ]
+        ]
+    },
+    {
+        "id": "cba76fde17f40331",
+        "type": "debug",
+        "z": "e2795d7a7bc129e7",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "7f24c0c161239d7b",
+        "type": "mqtt in",
+        "z": "e2795d7a7bc129e7",
+        "name": "",
+        "topic": "DLE/gruppe2_1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "acf4d894f9b5eeb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 420,
+        "wires": [
+            [
+                "f6db7cf06bde0197"
+            ]
+        ]
+    },
+    {
+        "id": "f6db7cf06bde0197",
+        "type": "debug",
+        "z": "e2795d7a7bc129e7",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "321a42a4ecca8e13",
+        "type": "mqtt in",
+        "z": "e2795d7a7bc129e7",
+        "name": "",
+        "topic": "DLE/gruppe2_2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "acf4d894f9b5eeb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 540,
+        "wires": [
+            [
+                "1a5f8de0264b2006"
+            ]
+        ]
+    },
+    {
+        "id": "1a5f8de0264b2006",
+        "type": "debug",
+        "z": "e2795d7a7bc129e7",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d01e9b6cf542e3d8",
+        "type": "inject",
+        "z": "dc6a38cba885899f",
+        "name": "Send testdata til ThingSpeak",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "2",
+        "topic": "",
+        "x": 320,
+        "y": 140,
+        "wires": [
+            [
+                "0830d8f6dfd7a12f"
+            ]
+        ]
+    },
+    {
+        "id": "0830d8f6dfd7a12f",
+        "type": "function",
+        "z": "dc6a38cba885899f",
+        "name": "Lav ThingSpeak request",
+        "func": "var p1 = flow.get(\"P1\");\nvar p2 = flow.get(\"P2\");\nvar p3 = flow.get(\"P3\");\nvar p4 = flow.get(\"P4\");\nvar p5 = flow.get(\"P5\");\nvar p6 = flow.get(\"P6\");\nvar t1 = flow.get(\"T1\");\nvar t3 = flow.get(\"T3\");\n\nlet apiKey = \"JGPE3AQYAJJP8TJT\"; // din Write API Key\n\n// Lav et dataobjekt med faktiske værdier\nlet data = {\n    field1: p1,   // Tryk 1\n    field2: t1,   // Temperatur 1\n    field3: p2,   // Tryk 2\n    field4: p3,   // Tryk 3\n    field5: t3,   // Temperatur 3\n    field6: p4,   // Tryk 4\n    field7: p5,   // Tryk 5\n    field8: p6    // Tryk 6\n};\n\n// Byg payload-string\nlet payload = `api_key=${apiKey}`;\nfor (let i = 1; i <= 8; i++) {\n    payload += `&field${i}=${data[\"field\" + i]}`;\n}\n\nmsg.method = \"POST\";\nmsg.url = \"https://api.thingspeak.com/update\";\nmsg.headers = { \"Content-Type\": \"application/x-www-form-urlencoded\" };\nmsg.payload = payload;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 140,
+        "wires": [
+            [
+                "dc81c94c099d8d9e"
+            ]
+        ]
+    },
+    {
+        "id": "dc81c94c099d8d9e",
+        "type": "http request",
+        "z": "dc6a38cba885899f",
+        "name": "Send til ThingSpeak",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 830,
+        "y": 140,
+        "wires": [
+            [
+                "e15735ac145bd9db"
+            ]
+        ]
+    },
+    {
+        "id": "e15735ac145bd9db",
+        "type": "debug",
+        "z": "dc6a38cba885899f",
+        "name": "Resultat fra ThingSpeak",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ad0a070f4ac66e12",
+        "type": "inject",
+        "z": "dc6a38cba885899f",
+        "name": "Send testdata til ThingSpeak",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "2",
+        "topic": "",
+        "x": 300,
+        "y": 340,
+        "wires": [
+            [
+                "710fbea3ae5aa228"
+            ]
+        ]
+    },
+    {
+        "id": "710fbea3ae5aa228",
+        "type": "function",
+        "z": "dc6a38cba885899f",
+        "name": "Lav ThingSpeak request",
+        "func": "var t1 = flow.get(\"T1\");\nvar t3 = flow.get(\"T3\");\nvar p1 = flow.get(\"P1\");\nvar p2 = flow.get(\"P2\");\nvar p3 = flow.get(\"P3\");\nvar p4 = flow.get(\"P4\");\nvar p5 = flow.get(\"P5\");\nvar p6 = flow.get(\"P6\");\n\nlet apiKey = \"JGPE3AQYAJJP8TJT\"; // din Write API Key\n\n// Lav et dataobjekt med faktiske værdier\nlet data = {\n    field1: p1,\n    field2: t1,\n    field3: p2,\n    field4: p3,\n    field5: t3, \n    field6: p4,\n    field7: p5,\n    field8: p6  // Tryk 1\n};\n\n// Byg payload-string\nlet payload = `api_key=${apiKey}`;\nfor (let i = 1; i <= 8; i++) {\n    payload += `&field${i}=${data[\"field\" + i]}`;\n}\n\nmsg.method = \"POST\";\nmsg.url = \"https://api.thingspeak.com/update\";\nmsg.headers = { \"Content-Type\": \"application/x-www-form-urlencoded\" };\nmsg.payload = payload;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 340,
+        "wires": [
+            [
+                "b46debfb630be93f"
+            ]
+        ]
+    },
+    {
+        "id": "b46debfb630be93f",
+        "type": "http request",
+        "z": "dc6a38cba885899f",
+        "name": "Send til ThingSpeak",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 810,
+        "y": 340,
+        "wires": [
+            [
+                "cd4f381e273a8497"
+            ]
+        ]
+    },
+    {
+        "id": "cd4f381e273a8497",
+        "type": "debug",
+        "z": "dc6a38cba885899f",
+        "name": "Resultat fra ThingSpeak",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "52af03e8036b818a",
+        "type": "inject",
+        "z": "dc6a38cba885899f",
+        "name": "Send testdata til ThingSpeak",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "2",
+        "topic": "",
+        "x": 280,
+        "y": 520,
+        "wires": [
+            [
+                "4195ca343729d4f3"
+            ]
+        ]
+    },
+    {
+        "id": "4195ca343729d4f3",
+        "type": "function",
+        "z": "dc6a38cba885899f",
+        "name": "Lav ThingSpeak request",
+        "func": "var p1 = flow.get(\"P1\");\nvar p2 = flow.get(\"P2\");\nvar p3 = flow.get(\"P3\");\nvar p4 = flow.get(\"P4\");\nvar p5 = flow.get(\"P5\");\nvar p6 = flow.get(\"P6\");\nvar t1 = flow.get(\"T1\");\nvar t3 = flow.get(\"T3\");\n\nlet apiKey = \"JGPE3AQYAJJP8TJT\";\n\n// Lav et dataobjekt\nlet data = {\n    field1: p1,\n    field2: t1,\n    field3: p2,\n    field4: p3,\n    field5: t3,\n    field6: p4,\n    field7: p5,\n    field8: p6\n};\n\n// Byg payload\nlet payload = `api_key=${apiKey}`;\nfor (let i = 1; i <= 8; i++) {\n    let value = Number(data[\"field\" + i]); // konverter til tal\n    if (!isNaN(value)) {                   // kun gyldige tal\n        payload += `&field${i}=${value}`;\n    }\n}\n\nmsg.method = \"POST\";\nmsg.url = \"https://api.thingspeak.com/update\";\nmsg.headers = { \"Content-Type\": \"application/x-www-form-urlencoded\" };\nmsg.payload = payload;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 520,
+        "wires": [
+            [
+                "aa51ea0f7e6179c6"
+            ]
+        ]
+    },
+    {
+        "id": "aa51ea0f7e6179c6",
+        "type": "http request",
+        "z": "dc6a38cba885899f",
+        "name": "Send til ThingSpeak",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 790,
+        "y": 520,
+        "wires": [
+            [
+                "adb79b51c6c1d95e"
+            ]
+        ]
+    },
+    {
+        "id": "adb79b51c6c1d95e",
+        "type": "debug",
+        "z": "dc6a38cba885899f",
+        "name": "Resultat fra ThingSpeak",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "thingspeak_update",
+        "type": "function",
+        "z": "0da7672a3906ac4f",
+        "name": "Send til ThingSpeak",
+        "func": "let apiKey = \"JGPE3AQYAJJP8TJT\";\n\n// Hent alle værdier fra flow\nlet data = {\n    field1: flow.get(\"P1\"),\n    field2: flow.get(\"T1\"),\n    field3: flow.get(\"P2\"),\n    field4: flow.get(\"P3\"),\n    field5: flow.get(\"T3\"),\n    field6: flow.get(\"P4\"),\n    field7: flow.get(\"P5\"),\n    field8: flow.get(\"P6\")\n};\n\n// Byg payload\nlet payload = `api_key=${apiKey}`;\nfor (let i = 1; i <= 8; i++) {\n    let value = Number(data[`field${i}`]);\n    if (!isNaN(value)) payload += `&field${i}=${value}`;\n}\n\n// Returner HTTP-POST\nmsg.method = \"POST\";\nmsg.url = \"https://api.thingspeak.com/update\";\nmsg.headers = { \"Content-Type\": \"application/x-www-form-urlencoded\" };\nmsg.payload = payload;\n\nnode.status({fill:\"blue\",shape:\"dot\",text:payload});\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 280,
+        "wires": [
+            [
+                "http_request"
+            ]
+        ]
+    },
+    {
+        "id": "http_request",
+        "type": "http request",
+        "z": "0da7672a3906ac4f",
+        "name": "ThingSpeak POST",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 580,
+        "y": 280,
+        "wires": [
+            [
+                "debug_thingspeak"
+            ]
+        ]
+    },
+    {
+        "id": "debug_thingspeak",
+        "type": "debug",
+        "z": "0da7672a3906ac4f",
+        "name": "ThingSpeak respons",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "2794e1e697842192",
+        "type": "inject",
+        "z": "0da7672a3906ac4f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 280,
+        "wires": [
+            [
+                "thingspeak_update"
+            ]
+        ]
+    },
+    {
+        "id": "231943daaff4e510",
+        "type": "inject",
+        "z": "ccb1bd0c08f1227a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "str",
+        "x": 210,
+        "y": 220,
+        "wires": [
+            [
+                "ba47eff45522c46c"
+            ]
+        ]
+    },
+    {
+        "id": "ba47eff45522c46c",
+        "type": "mqtt out",
+        "z": "ccb1bd0c08f1227a",
+        "name": "",
+        "topic": "Jakob/UR",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bb779fbc966246cc",
+        "x": 400,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b624f7e2635ca80f",
+        "type": "inject",
+        "z": "ccb1bd0c08f1227a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 203.1999969482422,
+        "y": 171.1999969482422,
+        "wires": [
+            [
+                "ba47eff45522c46c"
+            ]
+        ]
+    }
+]
